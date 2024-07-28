@@ -1,0 +1,225 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+
+<head>
+    <title>Kazan Japanese Steakhouse Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToDetails(name, price) {
+            localStorage.setItem('itemName', name);
+            localStorage.setItem('itemPrice', price);
+            window.location.href = 'details.html';
+        }
+    </script>
+</head>
+<body>
+    
+    <main>
+        <section class="menu-section">
+            <h2>Appetizers</h2>
+            <ul>
+                <li onclick="redirectToDetails('Edamame', '$5.99')">
+                    <span class="item-name">Edamame</span>
+                    <span class="item-price">$5.99</span>
+                </li>
+                <li onclick="redirectToDetails('Shumai', '$7.99')">
+                    <span class="item-name">Shumai</span>
+                    <span class="item-price">$7.99</span>
+                </li>
+                <li onclick="redirectToDetails('Gyoza', '$7.99')">
+                    <span class="item-name">Gyoza</span>
+                    <span class="item-price">$7.99</span>
+                </li>
+                <li onclick="redirectToDetails('Vegetable Tempura', '$7.99')">
+                    <span class="item-name">Vegetable Tempura</span>
+                    <span class="item-price">$7.99</span>
+                </li>
+                <li onclick="redirectToDetails('Shrimp Tempura', '$9.99')">
+                    <span class="item-name">Shrimp Tempura</span>
+                    <span class="item-price">$9.99</span>
+                </li>
+                <li onclick="redirectToDetails('Soft Shell Crab Tempura', '$10.99')">
+                    <span class="item-name">Soft Shell Crab Tempura</span>
+                    <span class="item-price">$10.99</span>
+                </li>
+                <li onclick="redirectToDetails('Egg Roll', '$3.00')">
+                    <span class="item-name">Egg Roll</span>
+                    <span class="item-price">$3.00</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>From the Sushi Bar</h2>
+            <ul>
+                <li onclick="redirectToDetails('Sunomono Salad', '$6.99')">
+                    <span class="item-name">Sunomono Salad</span>
+                    <span class="item-price">$6.99</span>
+                </li>
+                <li onclick="redirectToDetails('Seaweed Salad', '$5.99')">
+                    <span class="item-name">Seaweed Salad</span>
+                    <span class="item-price">$5.99</span>
+                </li>
+                <li onclick="redirectToDetails('Spicy Cucumber Salad', '$7.99')">
+                    <span class="item-name">Spicy Cucumber Salad</span>
+                    <span class="item-price">$7.99</span>
+                </li>
+                <li onclick="redirectToDetails('Sushi Appetizer', '$9.99')">
+                    <span class="item-name">Sushi Appetizer</span>
+                    <span class="item-price">$9.99</span>
+                </li>
+                <li onclick="redirectToDetails('Sashimi Appetizer', '$13.95')">
+                    <span class="item-name">Sashimi Appetizer</span>
+                    <span class="item-price">$13.95</span>
+                </li>
+                <li onclick="redirectToDetails('Sushi and Sashimi Combo', '$14.95')">
+                    <span class="item-name">Sushi and Sashimi Combo</span>
+                    <span class="item-price">$14.95</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>Hibachi Entrees</h2>
+            <ul>
+                <li onclick="redirectToDetails('Fried Rice', '$1.50')">
+                    <span class="item-name">Fried Rice</span>
+                    <span class="item-price">$1.50</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Chicken', '$16.99')">
+                    <span class="item-name">Hibachi Chicken</span>
+                    <span class="item-price">$16.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Steak', '$20.99')">
+                    <span class="item-name">Hibachi Steak</span>
+                    <span class="item-price">$20.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Filet Mignon', '$25.99')">
+                    <span class="item-name">Hibachi Filet Mignon</span>
+                    <span class="item-price">$25.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Shrimp', '$21.99')">
+                    <span class="item-name">Hibachi Shrimp</span>
+                    <span class="item-price">$21.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Salmon', '$23.99')">
+                    <span class="item-name">Hibachi Salmon</span>
+                    <span class="item-price">$23.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Orange Roughy', '$21.99')">
+                    <span class="item-name">Hibachi Orange Roughy</span>
+                    <span class="item-price">$21.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Lobster', '$36.99')">
+                    <span class="item-name">Hibachi Lobster</span>
+                    <span class="item-price">$36.99</span>
+                </li>
+                <li onclick="redirectToDetails('Hibachi Vegetable Dinner', '$14.99')">
+                    <span class="item-name">Hibachi Vegetable Dinner</span>
+                    <span class="item-price">$14.99</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>Yakisoba Specials</h2>
+            <ul>
+                <li onclick="redirectToDetails('Chicken Yakisoba', '$16.99')">
+                    <span class="item-name">Chicken Yakisoba</span>
+                    <span class="item-price">$16.99</span>
+                </li>
+                <li onclick="redirectToDetails('Steak Yakisoba', '$19.99')">
+                    <span class="item-name">Steak Yakisoba</span>
+                    <span class="item-price">$19.99</span>
+                </li>
+                <li onclick="redirectToDetails('Shrimp Yakisoba', '$20.99')">
+                    <span class="item-name">Shrimp Yakisoba</span>
+                    <span class="item-price">$20.99</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>Childrens' Menu (Under 10)</h2>
+            <ul>
+                <li onclick="redirectToDetails('Kid\'s Chicken', '$10.99')">
+                    <span class="item-name">Kid's Chicken</span>
+                    <span class="item-price">$10.99</span>
+                </li>
+                <li onclick="redirectToDetails('Kid\'s Steak', '$12.99')">
+                    <span class="item-name">Kid's Steak</span>
+                    <span class="item-price">$12.99</span>
+                </li>
+                <li onclick="redirectToDetails('Kid\'s Filet Mignon', '$15.99')">
+                    <span class="item-name">Kid's Filet Mignon</span>
+                    <span class="item-price">$15.99</span>
+                </li>
+                <li onclick="redirectToDetails('Kid\'s Shrimp', '$12.99')">
+                    <span class="item-name">Kid's Shrimp</span>
+                    <span class="item-price">$12.99</span>
+                </li>
+                <li onclick="redirectToDetails('Kid\'s Scallop', '$13.99')">
+                    <span class="item-name">Kid's Scallop</span>
+                    <span class="item-price">$13.99</span>
+                </li>
+                <li onclick="redirectToDetails('Kid\'s Lobster', '$18.99')">
+                    <span class="item-name">Kid's Lobster</span>
+                    <span class="item-price">$18.99</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>Side Order</h2>
+            <ul>
+                <li onclick="redirectToDetails('Extra Chicken', '$7.99')">
+                    <span class="item-name">Extra Chicken</span>
+                    <span class="item-price">$7.99</span>
+                </li>
+                <li onclick="redirectToDetails('Extra Steak', '$9.99')">
+                    <span class="item-name">Extra Steak</span>
+                    <span class="item-price">$9.99</span>
+                </li>
+                <li onclick="redirectToDetails('Extra Filet Mignon', '$12.99')">
+                    <span class="item-name">Extra Filet Mignon</span>
+                    <span class="item-price">$12.99</span>
+                </li>
+                <li onclick="redirectToDetails('Extra Shrimp', '$10.99')">
+                    <span class="item-name">Extra Shrimp</span>
+                    <span class="item-price">$10.99</span>
+                </li>
+                <li onclick="redirectToDetails('Extra Salmon', '$11.99')">
+                    <span class="item-name">Extra Salmon</span>
+                    <span class="item-price">$11.99</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="menu-section">
+            <h2>Desserts</h2>
+            <ul>
+                <li onclick="redirectToDetails('Ice Cream', '$5.99')">
+                    <span class="item-name">Ice Cream</span>
+                    <span class="item-price">$5.99</span>
+                </li>
+                <li onclick="redirectToDetails('Mochi', '$4.99')">
+                    <span class="item-name">Mochi</span>
+                    <span class="item-price">$4.99</span>
+                </li>
+                <li onclick="redirectToDetails('Cheesecake', '$6.99')">
+                    <span class="item-name">Cheesecake</span>
+                    <span class="item-price">$6.99</span>
+                </li>
+                <li onclick="redirectToDetails('Chocolate Cake', '$5.99')">
+                    <span class="item-name">Chocolate Cake</span>
+                    <span class="item-price">$5.99</span>
+                </li>
+            </ul>
+        </section>
+        
+    </main>
+</body>
+
+
+{% endblock %}

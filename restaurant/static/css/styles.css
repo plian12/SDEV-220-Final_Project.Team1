@@ -1,0 +1,117 @@
+/* CSS for the restaurant website */
+
+a {
+    text-decoration: none;
+  }
+
+.lookup-container {
+    margin-top: 30px;
+    margin-right: 60px;
+    text-align: center;
+    float: right
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #333;
+    background-color: #fff;
+}
+
+.btn-secondary:hover {
+    color: #ed6a6a;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+body {
+    font-family: 'Sawarabi Mincho', serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ed6a6a;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 
+        1.5px -1.5px black,
+        1.5px 1.5px black,
+        -1.5px 1.5px black,
+        -1.5px -1.5px black;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #ed6a6a;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.item-name:hover {
+    cursor: pointer;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: #ed6a6a;
+}
+
+footer {
+    background-color: #ed6a6a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

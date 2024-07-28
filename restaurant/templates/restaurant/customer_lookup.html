@@ -1,0 +1,33 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+    <body>
+        <div class="search-container">
+            <h2>Customer Search</h2>
+            <form method="post" action="{% url 'customer_lookup' %}">
+                {% csrf_token %}
+                <input type="text" name="search_term" placeholder="Enter name or phone number">
+                <button type="submit">Search</button>
+            </form>
+            <div class="customer_list">
+                {% for customer in customers %}
+                    <div class="customer-item">
+                        <p>{{ customer.name }} - {{ customer.phone_number }}</p>
+                        <a href="{% url 'customer_detail' customer.id %}">View Details</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="add_customer">
+                <a href="{% url 'add_customer' %}">
+                    <button type="button">Add New Customer</button>
+                </a>
+            </div>
+            <div class="back_button">
+                <a href="{% url 'home' %}">
+                    <button type="button">Back</button>
+                </a>
+            </div>
+        </div>
+    </body>
+
+{% endblock %}

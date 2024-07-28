@@ -1,0 +1,33 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+
+<div class="add_customer_container">
+    <h2>Add New Customer</h2>
+
+    <form method="post" action="{% url 'add_customer' %}">
+        {% csrf_token %}
+        <div class="form_group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form_group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number" required>
+        </div>
+        <div class="form_group">
+            <button type="submit">Add Customer</button>
+        </div>
+    </form>
+    <div>
+        <a href="{% url 'customer_lookup' %}">Back</a>
+    </div>
+    
+    {% if error %}
+    <div class="error_message">
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

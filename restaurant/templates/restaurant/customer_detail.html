@@ -1,0 +1,26 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+<body>
+    <div class="detail-container">
+        <h1>Customer Details</h1>
+        <p>Name: {{ customer.name }}</p>
+        <p>Phone Number: {{ customer.phone_number }}</p>
+        <p>Total Points: {{ customer.points }}</p> 
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+
+        <form method="post" style="margin-top: 10px;">
+            {% csrf_token %}
+            <input type="hidden" name="delete" value="true">
+            <button type="submit" style="color: red;">Delete</button>
+        </form>
+
+        <a href="{% url 'customer_lookup' %}">Back to Search</a>
+    </div>
+</body>
+{% endblock %}
